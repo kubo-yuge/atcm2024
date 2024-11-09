@@ -4947,12 +4947,13 @@ if((recflg==1)&(stoknow==2),
 
 Center=[94.898,9.91];
 Scale=5.331;
-Rbound=[115.471,0];
+Rbound=[114.61,0];
 tmp1=screenbounds();tmp1=[tmp1_2_1,0];
 Center=Center-Rbound+tmp1;
 Setwindow([-3,3],[-3,3]);
 Setax([4,"yi"]);
 Mvdrwxy();
+Putpoint("z",Mvpt(1,1),z.xy);
 tmp=1;
 forall(1..2,
   Expr(Mvpt(#,0),"s1",text(#));
@@ -4982,7 +4983,7 @@ var cdy = CindyJS({
   },
   angleUnit: "°",
   geometry: [
-    {name: "z", type: "Free", pos: [4.0, 1.5027027027027264, 0.10036428394976431], color: [1.0, 0.0, 0.0], labeled: true},
+    {name: "z", type: "Free", pos: [4.0, 0.5925925925925926, 0.03929606884805617], color: [1.0, 0.0, 0.0], labeled: true},
     {name: "Text1", type: "EditableText", pos: [4.0, 3.9148936170212765, 0.1702127659574468], color: [0.0, 0.0, 0.0], fillcolor: [1.0, 1.0, 1.0], fillalpha: 1.0, minwidth: 500, textsize: 24.0},
     {name: "NE", type: "Free", pos: [4.0, 1.0067746650167269, 0.05318084682256492], color: [1.0,1.0,1.0], labeled: false, size: 2.0, border:false },
     {name: "Text2", type: "EditableText", pos: [4.0, -0.8516129032258064, 0.25806451612903225], color: [0.0, 0.0, 0.0], fillcolor: [1.0, 1.0, 1.0], fillalpha: 1.0, minwidth: 580, textsize: 24.0},
