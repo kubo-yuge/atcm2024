@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     
-    <title>defintVaE241130Up01+.cdy</title>
+    <title>defintVaE241130Up02+.cdy</title>
     <style type="text/css">
         * {
             margin: 0px;
@@ -3266,6 +3266,8 @@ Translatepoint(point,mov):=(
 );
 Ketcindyjsfigure=0;
 Ketcindyjsscale=1;
+import("ketcindy.ini");
+
 
 ansflg=0;
 resetflg=0;
@@ -3405,7 +3407,7 @@ if((Animeflg==1)%(Animeflg==0),
   Expr([1.26,-0.8]+pos,"n1e","\displaystyle {\color{black}=}"+format((ns+1)*(2*ns+1)/(6*ns^2),4),["Size=1.3","Color=red"]);
   Expr([1.8,-0.8]+pos,"n1e","(n="+text(ns)+")",["Size=1.3"]);
   if(ss==200,
-    Expr([1.3,-1]+pos,"n1e","\displaystyle \int_0^1 x^2\,dx=\lim_{n\to\infty}S_n=\dfrac{1}{6}\cdot1\cdot2=\dfrac{1}{3}=0.3333\cdots",["Size=1.3"]);
+    Expr([1.3,-1]+pos,"n1e","\displaystyle \int_0^1 x^2\,dx=\lim_{n\to\infty}S_n=\dfrac{1\cdot2}{6}=0.3333\cdots",["Size=1.3"]);
   );
 );
 
@@ -3443,14 +3445,14 @@ var cdy = CindyJS({
     {name: "Text72", type: "Button", pos: [1.4270917858491299, -2.361855169609123, 4.0], color: [0.0, 0.0, 0.0], fillcolor: [1.0, 0.737, 0.467], fillalpha: 0.5213675213675214, script: "Animeflg=1-Animeflg;\nif(Animeflg==0,\n  pauseanimation();\n  sorg=sstart;\n,\n  resetclock();\n  playanimation();\n);\n", text: "Pause", textsize: 18.0},
     {name: "Text73", type: "Button", pos: [2.7608853439650223, -2.361855169609123, 4.0], color: [0.0, 0.0, 0.0], fillcolor: [1.0, 0.737, 0.467], fillalpha: 0.4700854700854701, script: "sorg=sstart;\nDirflg=-Dirflg;\nAnimeflg=1;\nresetclock();\nplayanimation();\n", text: "Rev", textsize: 18.0},
     {name: "Text74", type: "Button", pos: [3.7494617458626833, -2.361855169609123, 4.0], color: [0.0, 0.0, 0.0], fillcolor: [1.0, 0.737, 0.467], fillalpha: 0.5641025641025641, script: "stopanimation();\nAnimeflg=\"\";\nsstart=Current;\n", text: "Stop", textsize: 18.0},
-    {name: "Text40", type: "Button", pos: [4.0, 0.36933797909407673, -1.9292600910669735], color: [0.0, 0.0, 0.0], fillcolor: [0.757, 0.0, 0.0], fillalpha: 0.36752136752136755, script: "ansflg=1;", text: "答合せ", textsize: 18.0},
-    {name: "Text41", type: "Button", pos: [-3.5109414200430513, -0.7368642486510109, 4.0], color: [0.0, 0.0, 0.0], fillcolor: [0.0, 1.0, 0.0], fillalpha: 0.6923076923076923, script: "resetflg=1;\nansflg=0;", text: "Reset", textsize: 18.0}
+    {name: "Text40", type: "Button", pos: [4.0, 0.36933797909407673, -1.9292600910669735], color: [0.0, 0.0, 0.0], fillcolor: [0.757, 0.0, 0.0], fillalpha: 0.36752136752136755, script: "ansflg=1;", text: "Grade", textsize: 18.0},
+    {name: "Text41", type: "Button", pos: [-2.7018355783870396, -0.7368642486510109, 4.0], color: [0.0, 0.0, 0.0], fillcolor: [0.0, 1.0, 0.0], fillalpha: 0.6923076923076923, script: "resetflg=1;\nansflg=0;", text: "Reset", textsize: 18.0}
   ],
   ports: [{
     width: 1000,
-    height: 709,
+    height: 728,
     id: "CSCanvas",
-    transform: [{visibleRect: [-2.270192060182158, 1.497207015028647, 1.3418875900678946, -1.0637574569986405]}],
+    transform: [{visibleRect: [-2.270192060182158, 1.497207015028647, 1.3418875900678946, -1.1323869703533915]}],
     grid: 0.1,
     snap: true,
     background: "rgb(247,247,247)"
