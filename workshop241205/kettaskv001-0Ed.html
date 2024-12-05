@@ -4583,18 +4583,18 @@ if((recflg==1)&(stoknow==2),
 
 Center=[77.34,14.972];
 Scale=1;
-Rbound=[122.904,0];
+Rbound=[122.473,0];
 tmp1=screenbounds();tmp1=[tmp1_2_1,0];
 Center=Center-Rbound+tmp1;
 Pos=8;Dy=2.7;
 Letter(Mvpt(10,Pos),"e","How to Use",["Size=2"]);
 
 Pos=Pos-Dy-2;
-Framedata("1",[Mvpt(23.5,Pos),1.5,1.1]);
+Framedata("1",[Mvpt(25.9,Pos),1.5,1.1]);
 Shade(["fr1"],["Color=green"]);
-Letter(Mvpt(5,Pos),"e","1.Input a number, click  OK .");
+Letter(Mvpt(5,Pos),"e","1.Input your number, click  OK .");
 Pos=Pos-Dy;
-Letter(Mvpt(10,Pos),"e","Name is displayed right of 'St='");
+Letter(Mvpt(10,Pos),"e","Name will be displayed right of 'St='");
 
 Pos=Pos-Dy;
 Framedata("2",[Mvpt(12,Pos),1.5,1.1]);
@@ -4619,23 +4619,40 @@ Pos=Pos-Dy;
 if(indexof(Textedit(2),"fr")>0,//add embed
   Framedata("5",[Mvpt(11.8,Pos),1.2,1.1]);
   Shade(["fr5"],["Color=yellow"]);
-  Letter(Mvpt(5,Pos),"e","5.Click   2   as numerator ");
+  Letter(Mvpt(5,Pos),"e","5.Click   2   as the numerator ");
 );//add embed
 
 Pos=Pos-Dy;
 if(indexof(Textedit(2),"fr(2")>0,//add embed
   Framedata("6",[Mvpt(12,Pos),1.5,1.1]);
   Shade(["fr6"],["Color=[.3,.05,.1,0]"]);
-  Framedata("7",[Mvpt(22.3,Pos),1.2,1.1]);
+  Letter(Mvpt(5,Pos),"e","6.Click  $\,\to$   then move '?' to the right ");
+  Pos=Pos-Dy;
+  Letter(Mvpt(8,Pos),"e","and '??' becomes one '?'");
+);//add embed
+
+  Pos=Pos-Dy;
+if(indexof(Textedit(2),"fr(2,?")>0,//add embed
+  Framedata("7",[Mvpt(11.8,Pos),1.2,1.1]);
   Shade(["fr7"],["Color=yellow"]);
-  Letter(Mvpt(5,Pos),"e","6.Click  $\,\to$   and click   3   as dnominator");
+  Letter(Mvpt(5,Pos),"e","7.Click   3   as the denominator");
+);//add embed
+
+if(indexof(Textedit(2),"fr(2,3")>0,//add embed
+  Framedata("7",[Mvpt(11.8,Pos),1.2,1.1]);
+  Shade(["fr7"],["Color=yellow"]);
+  Letter(Mvpt(5,Pos),"e","7.Click   3   as the denominator");
+  Pos=Pos-Dy;
+  Framedata("8",[Mvpt(12,Pos),1.5,1.1]);
+  Shade(["fr8"],["Color=[.3,.05,.1,0]"]);
+  Letter(Mvpt(5,Pos),"e","8.Click  $\,\to$   to move '?' to the right");
 );//add embed
 
 Pos=Pos-Dy;
-if(indexof(Textedit(2),"fr(2,3")>0,//add embed
-  Framedata("8",[Mvpt(12,Pos),1.5,1.1]);
-  Shade(["fr8"],["Color=[.3,.05,.1,0]"]);
-  Letter(Mvpt(5,Pos),"e","7.Click  OK  to display the fraction ");
+if(indexof(Textedit(2),"fr(2,3)")>0,//add embed
+  Framedata("9",[Mvpt(12,Pos),1.5,1.1]);
+  Shade(["fr9"],["Color=[.3,.05,.1,0]"]);
+  Letter(Mvpt(5,Pos),"e","9.Click  OK  to display the fraction ");
 );//add embed
 
 
