@@ -1,0 +1,11 @@
+Q
+The dif\!ferential coef\!ficient
+[1] Did you understand the definition and the example of// the dif\!ferential coef\!ficient? Enter 1 for yes or 0 for no.
+[2] Caluculate the dif\!ferential coef\!ficient of // (sp)(sp)(sp)(sp)(sp)the function f(x)=x^2 at x=2.
+Sheet
+[1]=? ::
+[2]f'(2)=? ::5
+Ans
+[1] 1
+[2] 6
+

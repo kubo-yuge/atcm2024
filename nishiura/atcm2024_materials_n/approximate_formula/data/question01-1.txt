@@ -1,0 +1,10 @@
+Q
+Let f(x)=log(1+x). Answer the questions.
+[1] Find the quadratic approximation of f(x) at x=0.
+[2] Find the cubic approximation of f(x) at x=0.
+Sheet
+[1]=? ::5
+[2]=? ::5
+Ans
+[1] x-fr(1,2)x^(2)
+[2] x-fr(1,2)x^(2)+fr(1,3)x^(3)

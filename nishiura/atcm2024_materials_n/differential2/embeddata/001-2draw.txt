@@ -1,0 +1,104 @@
+if((nqu>=1)&(nqu<=3), 
+pA=[76.5,20];
+mx=3;
+my=-3.7;
+Letter(pA,"e","[The differential coefficient]",["Size=1.2"]);
+Letter(pA+[0,my],"e","If there exists a limit value of ",["Size=1.1"]);
+Expr(pA+[mx,2.2*my],"e","\dfrac{f(z)-f(a)}{z-a}",["Size=1.1"]);
+Letter(pA+[0,3.4*my],"e","as $z\to a$, it is called the differential coefficient ",["Size=1.1"]);
+Letter(pA+[0,4.4*my],"e","of $f(x)$ at $x=a$ and is denoted by $f'(a)$.",["Size=1.1"]);
+Expr(pA+[mx,5.7*my],"e","\displaystyle f'(a)=\lim_{z \to a} \dfrac{f(z)-f(a)}{z-a}",["Size=1.1"]);
+); 
+
+//////////////////////////////////////////////////////////////////////////////////
+if(nqu==2,
+Letter(pA+[0,7.5*my],"e","[Example]",["Size=1.2"]);
+Letter(pA+[mx,8.5*my],"e","The differential coefficient of $f(x)=x^2$ at $x=1$ is",["Size=1.1"]);
+Letter(pA+[2*mx,10*my],"e","$\displaystyle f'(1)=\lim_{z\to 1}\dfrac{f(z)-f(1)}{z-1}=\lim_{z\to 1}\dfrac{z^2-1}{z-1}$",["Size=1.1"]);
+Letter(pA+[2*mx,11.5*my],"e","$\displaystyle \phantom{f'(1)}=\lim_{z\to 1}\dfrac{(z+1)(z-1)}{z-1}$",["Size=1.1"]);
+Letter(pA+[2*mx,13*my],"e","$\displaystyle \phantom{f'(1)}=\lim_{z\to 1}(z+1)=2.$",["Size=1.1"]);
+); 
+
+//////////////////////////////////////////////////////////////////////////////////
+if(nqu==1,
+Setwindow([-0.5,3],[-1.5,6]);
+Deffun("f(x)",["regional(y)","y=2^x-0.5","y"]);//1.5
+Deffun("g(x)",["regional(y)","y=log(x+0.5)/log(2)","y"]);
+x1=1.2; x2=3.3; Defvar(["x1",x1,"x2",x2]);
+Mvplotdata("1","f(x)","x=[-0.5,g(YMAX)]");
+op1="Size=12";
+aa=1;Defvar(["aa",aa]);
+Pointdata("1",Mvpt([aa,f(aa)]),[op1]);
+Listplot("do1",[Mvpt([aa,0]),Mvpt([aa,f(aa)]),Mvpt([0,f(aa)])],["do"]);
+Expr([Mvpt([aa,0]),"s4","a"]);
+Expr([Mvpt([0,f(aa)]),"w4","f(a)"]);
+
+tm=1.3;Defvar(["tm",tm]);
+ss=Animationparam(0,0.2,[0,tm]);
+tt=tm-ss;
+if(tt==0,
+  Pointdata("2",Mvpt([aa,f(aa)]),[op1,"Color=blue"]);
+  coef=Derivative("f(x)","x",aa);Defvar(["coef",coef]);
+  Mvplotdata("3","coef*(x-aa)+f(aa)","x=[XMIN,XMAX]",["Color=red"]);
+ ,
+  Pointdata("2",Mvpt([aa+tt,f(aa+tt)]),[op1,"Color=red"]);
+  Deffun("h(x)",["regional(y)","y=(f(aa+tt)-f(aa))*(x-aa)/tt+f(aa)","y"]);
+  Mvplotdata("2","h(x)","x=[XMIN,XMAX]",["Color=blue"]);
+  Listplot("do2",[Mvpt([aa+tt,0]),pt2_1,Mvpt([0,f(aa+tt)])],["do","Color=blue"]);
+  Listplot("do3",[Mvpt([aa,f(aa)]),Mvpt([aa+tt,f(aa)])],["do","Color=blue"]);
+  Expr([Mvpt([aa+tt,0]),"s4","z"]);
+  Expr([Mvpt([0,f(aa+tt)]),"w4","f(z)"]);
+);
+Mvdrwxy();
+); 
+
+//////////////////////////////////////////////////////////////////////////////////
+if(nqu==3,
+tmp="f'(3)=2";
+tmp=Textedit(2);
+tmp=Strsplit(tmp,"=");
+tmp=Removespace(tmp_2);
+if(length(tmp)==0,
+  mm=-1000000;
+,
+  mm=parse(tmp);
+);
+
+Defvar(["mm",mm]);
+Setwindow([-0.5,3],[-1.5,6]);
+Deffun("f(x)",["regional(y)","y=x^2","y"]);
+Deffun("g(x)",["regional(y)","y=sqrt(x)","y"]);
+aa=2;Defvar(["aa",aa]);
+Mvplotdata("1","f(x)","x=[-0.5,g(YMAX)]");
+if(mm>-1000000,
+  Deffun("h(x)",["regional(y)","y=mm*(x-aa)+f(aa)","y"]);
+  Deffun("ih(x)",["regional(y)","y=(x-f(aa))/mm+aa","y"]);
+  xm1=ih(YMIN);Defvar(["xm1",xm1]);
+  xm2=ih(YMAX);Defvar(["xm2",xm2]);
+  if(mm==2*aa,
+    cor="Color=red",cor="Color=blue"
+	);
+  if(indexof(tmp,"?")==0,
+  Mvplotdata("2","h(x)","x=[xm1,xm2]",[cor]);
+  );
+  );
+op1="Size=12";
+Pointdata("1",Mvpt([aa,f(aa)]),[op1]);
+Listplot("do1",[Mvpt([aa,0]),Mvpt([aa,f(aa)]),Mvpt([0,f(aa)])],["do"]);
+Expr([Mvpt([aa,0]),"s4","2"]);
+Expr([Mvpt([0,f(aa)]),"w4","4"]);
+Mvdrwxy();
+); 
+
+//////////////////////////////////////////////////////////////////////////////////
+if(nqu==0,
+   Letter([17,7.8],"e","1. Input a number, and click the green 'OK'.",["Color=red"]);
+   Letter([17,4.8],"e","2. Click 'OK' again to start.",["Color=red"]);
+);
+if(nqu==1,
+   Letter([17,7.8],"e","3. Click the green 'Nxt' to display [1]=?.",["Color=red"]);
+);
+if(nqu==2,
+   Letter([17,7.8],"e","4. Enter the answer, and click the light blue 'OK'.",["Color=red"]);
+   Letter([17,4.8],"e","5. Click the green 'Nxt' to display [2]=?.",["Color=red"]);
+);

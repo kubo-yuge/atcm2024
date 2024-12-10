@@ -1,0 +1,14 @@
+Q
+The average rate of change
+[1] Did you understand the definition and example of the // (sp)(sp)(sp)average rate of change? Enter 1 for yes or 0 for no.
+[2] Calculate the average rate of change of the function //(sp)(sp)(sp)(sp)(sp)(sp)y=x^2 from 1 to 3.
+[3] Calculate the average rate of change of the function //(sp)(sp)(sp)(sp)(sp)(sp)y=x^2 from a to b.
+Sheet
+[1]=? ::
+[2]=? ::5
+[3]=? ::5
+Ans
+[1] 1
+[2] 4
+[3] a+b
+

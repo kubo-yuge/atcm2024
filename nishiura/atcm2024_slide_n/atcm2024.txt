@@ -1,0 +1,145 @@
+title::slide0
+::\def\deg#1{#1^{\circ}}
+::\newcommand{\monthday}{0627}
+::\renewcommand{\baselinestretch}{1.5}
+
+%%%%%%%%%%%%%
+new::Contents of this talk
+%repeat=5
+
+\textinit
+\settext{3}{9}{130}
+%開始縦位置,改行幅,横幅
+
+layer::{120}{0}
+%[1,-]::\addtext{8}{\ten}{Purpose of this research}
+%[2,-]::\addtext[3]{8}{\ten}{KeTLMS}
+%[3,-]::\addtext[3]{8}{\ten}{Making teaching materials by KeTLMS}
+%[4,-]::\addtext[3]{8}{\ten}{Teaching materials}
+%[5,-]::\addtext[3]{8}{\ten}{Concluding remarks}
+end
+
+%%%%%%%%%%%%%
+new::Purpose of this research
+
+\textinit
+\settext{6}{10}{115}
+
+layer::{120}{0}
+\addtext{1}{}{We are developing an LMS called KeTLMS. 
+Using KeTLMS, we will create teaching methods that allow us to objectively assess students' levels of understanding while conducting the class, based on verification of its educational effectiveness.}
+end
+
+%%%%%%%%%%%%%
+new::KeTLMS
+
+\textinit
+\settext{5}{10}{118}
+
+layer::{120}{0}
+\addtext{1}{}{KeTLMS is a system designed to streamline the process of teachers creating and distributing questions, while students receive the questions and submit their answers. 
+Additionally, it allows teachers to collect and grade the answers efficiently. }
+end
+
+%%%%%%%%%%%%%
+new::KeTLMS
+
+\textinit
+\settext{3}{10}{118}
+
+layer::{120}{0}
+putnote::se{5}{-5}::include[bb=0.00 0.00 595.00 842.00,width=7cm,angle=-90]::KeTTask01.pdf
+\addtext[61]{0}{}{An important feature of the system is \vspace{-3mm}that both questions and answers are formatted as \vspace{-3mm}a single line of text.}
+end
+
+%%%%%%%%%%%%%
+new::Making \hspace{-0.3mm}teaching \hspace{-0.3mm}materials \hspace{-0.3mm}by \hspace{-0.3mm}KeTLMS
+
+\textinit
+\settext{6}{9}{130}
+
+layer::{120}{0}
+putnote::se{10}{1}::include[bb=0.00 0.00 595.00 842.00,width=7cm,angle=-90]::question01.pdf
+\addtext{3}{1.}{Create a question file, `question01-1.txt'.}
+end
+
+%%%%%%%%%%%%%
+new::Making \hspace{-0.3mm}teaching \hspace{-0.3mm}materials \hspace{-0.3mm}by \hspace{-0.3mm}KeTLMS
+
+\textinit
+\settext{6}{9}{130}
+
+layer::{120}{0}
+putnote::se{6}{22}::include[bb=0.00 0.00 595.00 842.00,width=7cm,angle=-90]::toolketmath.pdf
+\addtext{3}{2.}{Create a question file, `kettaskv01-1E.html' }
+\addtext{8}{}{by pressing bottuns `1.taskline' and `2.Kettask' }
+\addtext{8}{}{in `toolketmathE.cdy'.}
+end
+
+%%%%%%%%%%%%%
+new::Making \hspace{-0.3mm}teaching \hspace{-0.3mm}materials \hspace{-0.3mm}by \hspace{-0.3mm}KeTLMS
+
+\textinit
+\settext{6}{9}{130}
+
+layer::{120}{0}
+putnote::se{5}{13}::include[bb=0.00 0.00 595.00 842.00,width=8cm,angle=-90]::embedded_file.pdf
+\addtext{3}{3.}{Create a file to embed in `kettaskv01-1E.html`,}
+\addtext{8}{}{`001-1draw.txt'.}
+end
+
+%%%%%%%%%%%%%
+new::Making \hspace{-0.3mm}teaching \hspace{-0.3mm}materials \hspace{-0.3mm}by \hspace{-0.3mm}KeTLMS
+
+\textinit
+\settext{6}{9}{130}
+
+layer::{120}{0}
+putnote::se{10}{18}::include[bb=0.00 0.00 595.00 842.00,width=7cm,angle=-90]::toolembed.pdf
+\addtext{3}{4.}{Create an embedded file, `kettaskv01-1Ed.html',}
+\addtext{8}{}{using `toolembed.cdy'.}
+end
+
+%%%%%%%%%%%%%
+new::Teaching materials
+
+\textinit
+\settext{5}{10}{110}
+
+layer::{120}{0}
+\addtext{3}{}{We have created teaching materials on the differential coefficient, titled kettaskv001-1Ed.html and kettaskv001-2Ed.html.\\
+These materials consist of explanations and questions.}
+end
+
+%%%%%%%%%%%%%
+new::Teaching materials
+
+\textinit
+\settext{5}{10}{130}
+
+layer::{120}{0}
+putnote::se{-60}{-130}::include[bb=0.00 0.00 595.00 842.00,width=25cm]::qrcode.pdf
+\addtext{0}{}{kettaskv001-1Ed.html, kettaskv001-2Ed.html}
+end
+
+%%%%%%%%%%%%%
+new::Teaching materials
+%repeat=2
+
+\textinit
+\settext{5}{10}{110}
+
+layer::{120}{0}
+%[1,-]::putnote::se{-15}{-82}::include[bb=0.00 0.00 595.00 842.00,width=16cm]::anschart.pdf
+%[1,-]::\addtext{18}{}{File of answers : anschart001-1.csv}
+%[2,-]::\addtext[40]{3}{}{The teacher will check the answers given by the students and then move on to the next explanation.}
+end
+
+%%%%%%%%%%%%%
+new::Concluding remark
+
+\textinit
+\settext{5}{9}{113}
+layer::{120}{0}
+\addtext{3}{}{We can easily create interactive teaching materials with KeTLMS, and we will assess their effectiveness from now on.}
+end

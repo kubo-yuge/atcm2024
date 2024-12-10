@@ -1,0 +1,69 @@
+if((nqu>=1)&(nqu<=4), 
+Setwindow([-0.5,4],[-0.5,4]);
+Deffun("f(x)",["regional(y)","y=1.5^x-0.5","y"]);
+Deffun("g(x)",["regional(y)","y=log(x+0.5)/log(1.5)","y"]);
+Expr(Mvpt([g(YMAX),YMAX]),"nw","y=f(x)");
+x1=1.2; x2=3.3; Defvar(["x1",x1,"x2",x2]);
+Mvplotdata("1","f(x)","x=[-0.5,3.5]");
+Listplot("1",[[x1,0],[x1,f(x1)],[0,f(x1)]],["nodisp"]);
+Listplot("2",[[x2,0],[x2,f(x2)],[0,f(x2)]],["nodisp"]);
+Listplot("3",[[x1,f(x1)],[x2,f(x1)]],["nodisp"]);
+Mvdraw("sg1",["do"]);
+Mvdraw("sg2",["do"]);
+Mvdraw("sg3",["do"]);
+Htickmark([x1,"x_1",x2,"x_2"]);
+Vtickmark([f(x1),"y_1",f(x2),"y_2"]);
+Expr([Mvpt([x1,0]),"s","x_1",Mvpt([x2,0]),"s","x_2"]);
+Expr([Mvpt([0,f(x1)]),"w","f(x_1)",Mvpt([0,f(x2)]),"w","f(x_2)"]);
+Mvdrwxy();
+
+pA=[76.5,20];
+mx=3;
+my=-4.5;
+Letter(pA,"e","[The average rate of change]",["Size=1.2"]);
+Expr(pA+[mx,my],"e","\dfrac{f(x_2)-f(x_1)}{x_2-x_1}",["Size=1.1"]);
+Letter(pA+[0,2*my],"e","is called the average rate of change of $f(x)$ from $x_1$",["Size=1.1"]);
+Letter(pA+[0,2.7*my],"e","to $x_2$．",["Size=1.1"]);
+); 
+
+//////////////////////////////////////////////////////////////////////////////////
+if((nqu>=2)&(nqu<=4), 
+Letter(pA+[0,7.3*my],"e","[Example]",["Size=1.2"]);
+Letter(pA+[mx,8*my],"e","The average rate of change of the function ",["Size=1.1"]);
+Letter(pA+[mx,8.7*my],"e","$f(x)=x^2+3$ from $2$ to $5$ is",["Size=1.1"]);
+Letter(pA+[2*mx,9.7*my],"e","$\dfrac{28-7}{5-2}=\dfrac{21}{3}=7.$",["Size=1.1"]);
+); 
+
+//////////////////////////////////////////////////////////////////////////////////
+if((nqu>=5)&(nqu<=7), 
+pA=[76,20];
+mx=3;
+my=-3.7;
+Letter(pA,"e","[The derivative]",["Size=1.2"]);
+Letter(pA+[0,my],"e","If there exists a limit value of ",["Size=1.1"]);
+Expr(pA+[mx,2.2*my],"e","\dfrac{f(z)-f(a)}{z-a}",["Size=1.1"]);
+Letter(pA+[0,3.4*my],"e","as $z\to a$, it is called the derivative of $f(x)$ at ",["Size=1.1"]);
+Letter(pA+[0,4.4*my],"e","$x=a$ and is denoted by $f'(a)$.",["Size=1.1"]);
+Expr(pA+[mx,5.7*my],"e","\displaystyle f'(a)=\lim_{z \to a} \dfrac{f(z)-f(a)}{z-a}",["Size=1.1"]);
+); 
+
+//////////////////////////////////////////////////////////////////////////////////
+if((nqu>=6)&(nqu<=7), 
+Letter(pA+[0,7.5*my],"e","[Example]",["Size=1.2"]);
+Letter(pA+[mx,8.5*my],"e","The derivative of $f(x)=x^2$ at $x=1$ is",["Size=1.1"]);
+Letter(pA+[2*mx,10*my],"e","$\displaystyle f'(1)=\lim_{z\to 1}\dfrac{f(z)-f(1)}{z-1}=\lim_{z\to 1}\dfrac{z^2-1}{z-1}$",["Size=1.1"]);
+Letter(pA+[2*mx,11.5*my],"e","$\displaystyle \phantom{f'(1)}=\lim_{z\to 1}\dfrac{(z+1)(z-1)}{z-1}=\lim_{z\to 1}(z+1)=2.$",["Size=1.1"]);
+); 
+
+//////////////////////////////////////////////////////////////////////////////////
+if(nqu==0,
+   Letter([17,7.8],"e","1. Input a number, and click the green 'OK'.",["Color=red"]);
+   Letter([17,4.8],"e","2. Click 'OK' again to start.",["Color=red"]);
+);
+if(nqu==1,
+   Letter([17,7.8],"e","3. Click the green 'Nxt' to display [1]=?.",["Color=red"]);
+);
+if(nqu==2,
+   Letter([17,7.8],"e","4. Enter the answer, and click the light blue 'OK'.",["Color=red"]);
+   Letter([17,4.8],"e","5. Click the green 'Nxt' to display [2]=?.",["Color=red"]);
+);
